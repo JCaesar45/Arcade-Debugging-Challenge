@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arcade Debugging App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">Arcade Debugging Challenge</h1>
+    <div class="scoreboard">
+      <div class="score">Counter: <span id="counter-value">10</span></div>
+      <div class="score">Score: <span id="score-value">8</span></div>
+      <div class="score">Coins: <span id="coins-value">3</span></div>
+      <div class="score">Health: <span id="health-value">7</span></div>
+    </div>
+    <div class="instructions">
+      <p>Fix the code to match the expected results:</p>
+      <ul>
+        <li>Updated Counter should be 11 using <b>++counter</b></li>
+        <li>Final Score should be 8 using <b>score++</b></li>
+        <li>Updated Coins should be 2 using <b>--coins</b></li>
+        <li>New Health should be 7 using <b>health--</b></li>
+      </ul>
+    </div>
+    <button class="btn" onclick="runDebug()">Run Debug</button>
+  </div>
+
+  <script>
+    function runDebug() {
+      // Variables based on the corrected logic
+      let counter = 10;
+      let score = 8;
+      let coins = 3;
+      let health = 7;
+      // Correct operators
+      let updatedCounter = ++counter;
+      let finalScore = score++;
+      let updatedCoins = --coins;
+      let newHealth = health--;
+      // Update UI
+      document.getElementById('counter-value').textContent = updatedCounter;
+      document.getElementById('score-value').textContent = finalScore;
+      document.getElementById('coins-value').textContent = updatedCoins;
+      document.getElementById('health-value').textContent = newHealth;
+    }
+  </script>
+</body>
+
+</html>
